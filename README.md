@@ -4,6 +4,24 @@ The Formula to making a great site with tailwind
 
 [Tailwind Docs](https://tailwindcss.com/)
 
+# Installation
+- Click "Use Template" to clone the repository
+- Clone the repoitory with the git link locally
+- Run these commands
+```
+npm install tailwindcss@latest postcss@latest autoprefixer@latest
+```
+```
+npm run build-css
+```
+- Open `index.html` and you should be good to go
+- REMOVE `public/css/tailwind.css` from `.gitignore`
+
+## Notes
+- First made with Tailwind v2.0.2, PostCSS 8.2.1, Autoprefixer 10.1.0
+- You should update the variables in `package.json`
+- To purge css uncomment lines 4-7 in `tailwind.config.js` and run `npm run purge-css`
+
 ## Packages used:
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Animate On Scroll](https://michalsnik.github.io/aos/)
