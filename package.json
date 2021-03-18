@@ -4,8 +4,8 @@
   "description": "A template for tailwindcss on a static site",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build tailwind.css -o public/css/tailwind.css",
-    "purge-css": "NODE_ENV=production tailwindcss build tailwind.css -o public/css/tailwind.css"
+    "build-css": "tailwindcss build tailwind.css -o src/css/tailwind.css && minify src/css/tailwind.css src/css/styles.css > src/css/all.css",
+    "build": "rm -rf ./public && cp -r ./src ./public && NODE_ENV=production tailwindcss build tailwind.css -o public/css/tailwind.css && minify public/css/tailwind.css public/css/styles.css > public/css/all.css && rm -rf public/css/styles.css public/css/tailwind.css && minify src/index.html > public/index.html && rm -rf ./public/img && node compressImages.js && node -e \"console.log('Purged, minified, compressed!')\""
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,13 @@
   },
   "homepage": "https://github.com/iHildy/static-tailwind-starter#readme",
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1",
-    "tailwindcss": "^2.0.2"
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.4",
+    "compress-images": "^1.9.8",
+    "gifsicle": "^5.2.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "minify": "^6.0.1",
+    "pngquant-bin": "^6.0.0"
   }
 }
