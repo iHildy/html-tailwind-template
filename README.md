@@ -1,5 +1,5 @@
-# static-tailwind-starter
-A template for tailwindcss on a static site <br>
+# html-tailwind-starter
+A template for tailwindcss on a static html site <br>
 The Formula to making a great site with tailwind
 
 [Tailwind Docs](https://tailwindcss.com/)
